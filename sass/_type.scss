@@ -1,0 +1,37 @@
+//MIXINS
+@mixin fontsize($size){
+	font-size: $size * 1px;
+	font-size: $size * 0.1rem;
+}
+
+// EXTENDS
+%text--center {
+	text-align: center;
+}
+
+%text--white {
+	color: white;
+}
+
+// Typography
+
+h1,
+h2,
+h3 {
+	@extend %text--white;
+}
+
+.text--red {
+	color: $nvite-red;
+}
+
+
+
+.text-callout {
+	@extend %text--center;
+	@extend %text--white;
+	font-weight: 500;
+	text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+	line-height: 1.2em;
+	@include fontsize(24);
+}

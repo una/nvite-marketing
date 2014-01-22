@@ -1,0 +1,27 @@
+%button,
+.button {
+	border-radius: 5px;
+	border: 1px solid transparent;
+	box-shadow: rgba(0,0,0,0.1) 2px 2px 4px;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 22px;
+	font-weight: 600;
+	line-height: 1.2em;
+	padding: 0.5em 1em;
+	position: relative;	
+	text-align: center;
+	text-decoration: none;
+	text-shadow: 1px 1px 0px rgba(0,0,0,0.05);
+	@extend %button;
+}
+
+.button--red {
+	@extend %button;
+	@extend %text--white;
+	background-color: $nvite-red;
+}
+
+.text-area--intro {
+	@extend %button;
+}
