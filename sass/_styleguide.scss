@@ -1,0 +1,45 @@
+//COMPASS SETUP
+@import "compass/utilities/color/contrast";
+
+$contrasted-lightness-threshold: 50%;
+
+//COLOR BOXES IN STYLEGUIDE
+.color-box {
+	display: inline-block;
+	font-size: 0.8em;
+	height: 50px;
+	margin: 2px 1px;
+	padding:  20px 20px 0;
+	text-align: center;
+	vertical-align: top;
+	width: 70px;
+	&:before, &:after {
+	   display: block;
+	}
+}
+
+// THIS IS WHERE THE MAGIX HAPPENS
+$colors: (
+	nvite-red: #FB0036,
+	nvite-maroon: #8c2943,
+	nvite-gray: #bab9b6,
+	nvite-navy: #262d37,
+	base-color: #252525,
+	copy-color: #666,
+	message-success: #73C05E,
+	message-err: #E69E16,
+	message-generic: #F3E473
+);
+
+@each $color, $bgcolor in $colors {
+    .color-box.#{$color} {
+        @include contrasted($bgcolor);
+        &:before {
+            content: '$#{$color}';
+        }
+        &:after {
+            content: '#{$bgcolor}';
+        }
+    }
+}
+

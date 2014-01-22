@@ -4,8 +4,9 @@
 
 // nvite colors
 $nvite-red: #FB0036;
+$nvite-maroon: #8c2943;
 $nvite-gray: #bab9b6;
-$nvite-dark: #262d37;
+$nvite-navy: #262d37;
 $base-color: #252525;
 $copy-color: #666;
 
@@ -20,7 +21,10 @@ $message-success: #73C05E; //green
 $message-err: #E69E16; //orange
 $message-generic: #F3E473; //yellow
 
-// Color Relationships
+// Interpersonal Relationships
 $relationship-friend: $nvite-red; // red
 $relationship-host: #6278ff; // blue
 $relationship-you: #8baf4e; // green
+
+// Page Colors
+$bg-color: $base-color;
