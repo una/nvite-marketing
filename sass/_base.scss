@@ -2,3 +2,43 @@ body {
 	font-family: Source Sans Pro, sans-serif;
 	background-color: $bg-color; 
 }
+
+header {
+	display: none;
+}
+
+.intro-bg {
+  position: fixed; 
+  top: -50%; 
+  left: -50%; 
+  width: 200%; 
+  height: 200%;
+  z-index: -1;
+	img, 
+	.shader {
+		position: absolute; 
+		top: 0; 
+		left: 0; 
+		right: 0; 
+		bottom: 0; 
+		margin: auto; 
+		min-width: 50%;
+		min-height: 50%;
+
+	}
+}
+
+.shader {
+	background-color: rgba(0,0,0,0.8);
+}
+
+h1,
+h2,
+h3 {
+	color: white;
+}
+
+
+.text--red {
+	color: $nvite-red;
+}
