@@ -8,16 +8,18 @@ body {
 	height:100%;
 }
 
+* {
+	box-sizing: border-box;
+}
+
 header {
-	display: none;
+	
 }
 
 textarea, input, button { 
 	outline: none;
 }
 section {
-	min-height: 65%;
-	padding: 0 0 100px 0;
 	height: 100%;
 }
 
@@ -25,29 +27,3 @@ section {
 	display: block;
 	background-color: white; 
 }
-
-.intro-bg {
-	position: fixed; 
-	top: -50%; 
-	left: -50%; 
-	width: 200%; 
-	height: 200%;
-	z-index: -1;
-	img, 
-	.shader {
-		position: absolute; 
-		top: 0; 
-		left: 0; 
-		right: 0; 
-		bottom: 0; 
-		margin: auto; 
-		min-width: 50%;
-		min-height: 50%;
-
-	}
-}
-
-.shader {
-	background-color: rgba(0,0,0,0.8);
-}
-
