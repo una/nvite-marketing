@@ -30,7 +30,7 @@
 }
 
 .shader {
-	background-color: rgba(0,0,0,0.8);
+	background-color: rgba(238,28,77,0.8);
 }
 
 .nvite-seal {
@@ -41,4 +41,35 @@
 	height: 150px;
 	width: 150px;
 	margin: 10% auto 5%;
+}
+
+.input-words {
+	position: absolute;
+	color: $nvite-gray;
+	z-index: 2;
+	margin: 15px 0 0 -240px;
+}
+
+.intro-form {
+	input {
+		@include border-radius(5px 0 0 5px);
+		@include background-clip(padding-box);
+		@include fontsize(12);
+		position: relative;
+		left: 2px;
+		width: 250px;
+		padding: 12px;
+		margin: 0;
+		border: 0;
+		box-shadow: rgba(0,0,0,0.1) 2px 2px 4px;
+
+	}
+
+	.go-button {
+		@extend %text--white;
+		@include border-radius(0 5px 5px 0);
+		width: 100px;
+		margin-left: -5px;
+		background-color: $nvite-navy; 
+	}
 }
