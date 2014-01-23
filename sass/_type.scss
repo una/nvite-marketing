@@ -30,6 +30,10 @@
 	text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
 }
 
+a {
+	color: $nvite-maroon;
+}
+
 p {
 	color: $copy-color;
 }
@@ -37,4 +41,9 @@ p {
 h1,
 h2 {
 	@extend %text--white;
+}
+
+small {
+	font-size: 80%;
+	color: $nvite-gray;
 }

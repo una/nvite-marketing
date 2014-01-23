@@ -20,3 +20,20 @@ textarea, input, button {
 	max-width: 1200px;
 	margin: 0 auto;
 }
+
+hr {
+	opacity: 0.3;
+	border-top: 1px solid $nvite-gray;
+	border-bottom: 1px solid rgba(0,0,0,0);
+	margin-bottom: 3em;
+}
+
+%left,
+.left {
+	float: left;
+}
+
+%right,
+.right {
+	float: right;
+}
