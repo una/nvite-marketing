@@ -9,29 +9,32 @@
 	text-align: center;
 }
 
-%text--white {
-	color: white;
-}
-
 // Typography
 
-h1,
-h2,
-h3 {
-	@extend %text--white;
-}
-
+%text--red,
 .text--red {
 	color: $nvite-red;
 }
 
-
+%text--white,
+.text--white {
+	color: white;
+}
 
 .text-callout {
 	@extend %text--center;
-	@extend %text--white;
-	font-weight: 500;
-	text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-	line-height: 1.2em;
 	@include fontsize(24);
+	font-weight: 500;
+	line-height: 1.2em;
+	position: relative;
+	text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+p {
+	color: $copy-color;
+}
+
+h1,
+h2 {
+	@extend %text--white;
 }

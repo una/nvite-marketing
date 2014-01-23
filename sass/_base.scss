@@ -12,18 +12,11 @@ body {
 	box-sizing: border-box;
 }
 
-header {
-	
-}
-
 textarea, input, button { 
 	outline: none;
 }
-section {
-	height: 100%;
-}
 
-%section--white {
-	display: block;
-	background-color: white; 
+.contain-1200 {
+	max-width: 1200px;
+	margin: 0 auto;
 }

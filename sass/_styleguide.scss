@@ -7,12 +7,12 @@ $contrasted-lightness-threshold: 50%;
 .color-box {
 	display: inline-block;
 	font-size: 0.8em;
-	height: 50px;
+	height: 70px;
 	margin: 2px 1px;
 	padding:  20px 20px 0;
 	text-align: center;
 	vertical-align: top;
-	width: 70px;
+	width: 100px;
 	&:before, &:after {
 	   display: block;
 	}
@@ -21,6 +21,7 @@ $contrasted-lightness-threshold: 50%;
 // THIS IS WHERE THE MAGIX HAPPENS
 $colors: (
 	nvite-red: #FB0036,
+	nvite-pink: #EE1C4D,
 	nvite-maroon: #8c2943,
 	nvite-gray: #bab9b6,
 	nvite-navy: #262d37,
