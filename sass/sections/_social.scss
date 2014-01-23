@@ -11,10 +11,7 @@
 }
 
 .iphone {
-	$image: "iphone5.png";
-	background: image-url($image);
-	height: image-height($image);
-	width: image-width($image);
+	// there are now two of these bc of that one below
 	margin: 5% auto;
 	position: absolute;
 	top: $intro-height/1.8;
@@ -45,6 +42,7 @@
 	position: absolute;
 	top: 00%;
 	width: 280px;
+	cursor: pointer;
 	
 	&:after {
 		content: "";
@@ -81,4 +79,83 @@
 .section__social h2 {
 	color: $nvite-navy;
 	padding-top: 840px; //temp!
+}
+
+%screen {
+	display: none;
+}
+
+.iphone__screen--1 {
+	@extend %screen;
+	background-color: black;
+}
+
+.iphone__screen--2 {
+	@extend %screen;
+	background-color: yellow;
+}
+
+.iphone__screen--3 {
+	@extend %screen;
+	background-color: green;
+}
+
+.iphone__screen--d {
+	@extend %screen;
+	background-color: red;
+}
+
+//iPHONE IN CSS WOO
+
+$screen-width: 270px; // <-- this is the only variable
+$screen-height: (71/40)*$screen-width; //71:40 for iPhone5, 3:2 for iPhone4
+$phone-gutter: $screen-width/16;
+$phone-color: white;
+$iphone-color-shadow: darken($phone-color, 10);
+
+.iphone {
+	width: $screen-width + $phone-gutter*2;
+}
+
+.iphone-body {
+	background-color: $phone-color;
+	border-radius: $phone-gutter*2;
+	height: $screen-height + (1/3)*$screen-height;
+	position: absolute;
+	width: $screen-width + $phone-gutter*2;
+	box-shadow:rgba(0,0,0,0.3) 2px 2px 20px;
+}
+
+.screen {
+	background-color: lightblue;
+	outline: $phone-gutter/4 solid $iphone-color-shadow;
+	height: $screen-height; //71:40 aspect ratio
+	position: relative;
+	top: $screen-height/6;
+	width: $screen-width;
+	margin: 0 auto;
+}
+
+.home-button {
+	border-radius: 50%;
+	border: $phone-gutter/7 solid $iphone-color-shadow;
+	height: $phone-gutter*3;
+	left: $screen-width/2;
+	position: absolute;
+	top: $screen-height + (1/5)*$screen-height;
+	width: $phone-gutter*3;
+	z-index: 2;
+}
+
+.speaker {
+	width: $screen-width/6;
+	height: $phone-gutter/3;
+	background-color: darken($iphone-color-shadow, 15);
+	z-index: 2;
+	position: relative;
+	margin: 0 auto;
+	border-radius: 25%;
+	position: relative;
+	top: $screen-height*(-8/9);
+	margin: 0 auto;
 }
