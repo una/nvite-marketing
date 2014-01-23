@@ -6,13 +6,28 @@
 	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
 	<link rel="stylesheet" href="stylesheets/style.css">
 
+	<!-- startup screens -->
+		<!-- iPhone (Retina) -->
+		<link href="images/screen_icons/launch-iphone4.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image">
+		<!-- iPhone (Retina) -->
+		<link href="images/screen_icons/launch-iphone4retina.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+		<!-- iPhone 5 -->
+		<link href="images/screen_icons/apple-startup-iPhone-Tall-RETINA.png"  media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+
+	<!-- mobile icons -->
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/screen_icons/apple-touch-icon-144x144-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="120x120" href="images/screen_icons/apple-touch-icon-120x120-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/screen_icons/apple-touch-icon-114x114-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/screen_icons/apple-touch-icon-72x72-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" href="images/screen_icons/apple-touch-icon-precomposed.png">
+
 	<!-- Typeface -->
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
 
 </head>
 <body>
 	<header class="contain-1200" role="banner">
-		<nav>
+		<nav style="display:none">
 			<h1>nvite<span class="text--red">.<span></h1>
 			<ol role="navigation">
 				<li>
@@ -35,6 +50,9 @@
 		<section class="section__intro contain-1200">
 			<div class="nvite-seal"></div>
 			<h2 class="text-callout">Your next event is going to be great<span class="text--red">.</span></h2>
+			<a class="arrow-wrap" href="#section__social">
+				<span class="arrow"></span>
+			</a>
 			<div class="intro-bg">
 				<img src="images/header-vid3-colorreduced.gif" alt="">
 				<div class="shader"></div>
@@ -67,6 +85,11 @@
 	</main>
 
 	<footer role="contentinfo">
+		<button class="button--red">Let's Get Started</button>
+		<div class="social">
+			<div class="twitter"></div>
+			<div class="fb"></div>
+		</div>
 		<hr>
 		<small>&copy; nvite 2014. View our <a href="styleguide">styleguide</a>.</small>
 	</footer>

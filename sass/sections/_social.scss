@@ -107,7 +107,7 @@
 
 //iPHONE IN CSS WOO
 
-$screen-width: 270px; // <-- this is the only variable
+$screen-width: 250px; // <-- this is the only variable, make this ($(window).width()/4)
 $screen-height: (71/40)*$screen-width; //71:40 for iPhone5, 3:2 for iPhone4
 $phone-gutter: $screen-width/16;
 $phone-color: white;
