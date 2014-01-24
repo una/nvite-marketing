@@ -43,9 +43,9 @@
 
 .intro-form {
 	input {
+		@extend .input-words;
 		@include border-radius(8px 0 0 8px);
 		@include background-clip(padding-box);
-		@include fontsize(12);
 		position: relative;
 		left: 2px;
 		width: 400px;
@@ -54,7 +54,6 @@
 		margin: 0;
 		border: 0;
 		box-shadow: rgba(0,0,0,0.1) 2px 2px 4px;
-
 	}
 
 	.go-button {

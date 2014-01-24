@@ -21,6 +21,13 @@
 	background-color: $nvite-red;
 }
 
+.button--white {
+	@extend %button;
+	@extend %text--navy;
+	background-color: white;
+	
+}
+
 .text-area--intro {
 	@extend %button;
 	width: 30%;

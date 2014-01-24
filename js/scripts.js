@@ -7,10 +7,9 @@ $(window).scroll(function() {
 	$('.ipad').toggleClass('js-screenSwitch', currentScroll >= targetScroll);
 });
 
-$(window).scroll(function() {
-	if ($('.iphone').offset().top >= 815) {
-		$('.iphone').removeClass('js-fixedPos').css('top', 'auto');
-	}
+//On click of input area, stop auto typing
+$('.intro-form input').on('click', function(){
+  $('.input-words').css('display', 'none');
 });
 
 //RETYPING

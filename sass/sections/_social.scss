@@ -1,7 +1,7 @@
 .section__social {
 	margin-top: $intro-height;
 	height: 1000px; //TEMP
-	background-color: white;
+	background-color: lightblue; //temp
 }
 
 .popouts {
@@ -12,7 +12,7 @@
 
 .iphone {
 	@include transition-duration(0.8s);
-	margin: 5% auto;
+	margin: 30px auto;
 	position: absolute;
 	top: $intro-height/1.8;
 	left: 0; 
@@ -25,81 +25,9 @@
 }
 
 .js-fixedPos {
-		-webkit-transform: rotate(-25deg);
-		margin-left: 30px;
-	    margin-top: 350px;
+		@include transform (rotate(-25deg) translateX(-300px));
+	    margin-top: 290px;
 }
-
-
-// .popout-r-1 { //**REFACTOR THIS INTO A MIXIN
-// 	background: $nvite-pink;
-// 	border-radius: 6px;
-// 	box-shadow: 0 2px 0 0px rgba(0,0,0,0.25), inset 0 1px 0 0 rgba(255,255,255,0.2);
-// 	height: 150px;
-// 	left: 90%;
-// 	position: absolute;
-// 	position: absolute;
-// 	top: 00%;
-// 	width: 280px;
-// 	cursor: pointer;
-	
-// 	&:after {
-// 		content: "";
-// 		width: 0;
-// 		height: 0;
-// 		border-top: 152px solid $nvite-pink;
-// 		border-right: 65px solid transparent;
-// 		position: absolute;
-// 		bottom: -100px;
-// 		left: 12px;
-// 		border-bottom-left-radius: 3px;
-// 		@include rotate(30deg);
-// 	}
-// }
-
-// .popout-r-2 {
-// 	@extend .popout-r-1;
-// 	@include rotateX(180deg);
-// 	top: 60%;
-// 	width: 310px;
-// 	height: 160px;
-// 	left: 95%;
-// }
-
-// .popout-l-1 {
-// 	@extend .popout-r-1;
-// 	@include rotateY(180deg);
-// 	top: 10%;
-// 	width: 310px;
-// 	height: 220px;
-// 	left: -80%;
-// }
-
-
-
-// %screen {
-// 	display: none;
-// }
-
-// .iphone__screen--1 {
-// 	@extend %screen;
-// 	background-color: black;
-// }
-
-// .iphone__screen--2 {
-// 	@extend %screen;
-// 	background-color: yellow;
-// }
-
-// .iphone__screen--3 {
-// 	@extend %screen;
-// 	background-color: green;
-// }
-
-// .iphone__screen--d {
-// 	@extend %screen;
-// 	background-color: red;
-// }
 
 //iPHONE IN CSS WOO
 
@@ -111,6 +39,7 @@ $iphone-color-shadow: darken($phone-color, 10);
 
 .iphone {
 	width: $screen-width + $phone-gutter*2;
+	z-index: 1; 
 }
 
 .iphone-body {
@@ -119,7 +48,7 @@ $iphone-color-shadow: darken($phone-color, 10);
 	height: $screen-height + (1/3)*$screen-height;
 	position: absolute;
 	width: $screen-width + $phone-gutter*2;
-	@include box-shadow(rgba(0,0,0,0.3) 2px 2px 20px);
+	// @include box-shadow(rgba(0,0,0,0.3) 2px 2px 20px);
 }
 
 .screen {
@@ -179,12 +108,12 @@ body {
    margin: 5% auto;
    position: absolute;
    top: 1100px; 
-   right: -100px;
-   z-index: 1;
+   left: -50px;
+   z-index: 0;
    @include rotate(40deg);
    
    &.js-screenSwitch {
-   		top: 800px;
+   		top: 900px;
    		@include rotate(20deg);
    }
 }
@@ -195,7 +124,7 @@ body {
   height: $ipad-height + (1/3)*$ipad-height;
   position: absolute;
   width: $ipad-width + $ipad-gutter*2;
-  @include box-shadow(rgba(0,0,0,0.3) 2px 2px 20px);
+  // @include box-shadow(rgba(0,0,0,0.3) 2px 2px 20px);
 }
 
 .ipad__screen {
