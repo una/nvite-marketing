@@ -17,21 +17,11 @@
 	top: $intro-height/1.8;
 	left: 0; 
 	right: 0;
-	
-	&.js-popOuts {
-	    
-		.popouts {
-			//display: block; //temp fix why this wont work
-			opacity: 1;
-		}
-	}
+}
 
-	&.js-screenSwitch {
-		.screen {
-			@include transition-duration(0.8s);
-			background-image: image-url('screen3.jpg');
-		}
-	}
+.section__social h2 {
+	color: $nvite-navy;
+	padding-top: 2em;
 }
 
 .js-fixedPos {
@@ -41,78 +31,75 @@
 }
 
 
-.popout-r-1 { //**REFACTOR THIS INTO A MIXIN
-	background: $nvite-pink;
-	border-radius: 6px;
-	box-shadow: 0 2px 0 0px rgba(0,0,0,0.25), inset 0 1px 0 0 rgba(255,255,255,0.2);
-	height: 150px;
-	left: 90%;
-	position: absolute;
-	position: absolute;
-	top: 00%;
-	width: 280px;
-	cursor: pointer;
+// .popout-r-1 { //**REFACTOR THIS INTO A MIXIN
+// 	background: $nvite-pink;
+// 	border-radius: 6px;
+// 	box-shadow: 0 2px 0 0px rgba(0,0,0,0.25), inset 0 1px 0 0 rgba(255,255,255,0.2);
+// 	height: 150px;
+// 	left: 90%;
+// 	position: absolute;
+// 	position: absolute;
+// 	top: 00%;
+// 	width: 280px;
+// 	cursor: pointer;
 	
-	&:after {
-		content: "";
-		width: 0;
-		height: 0;
-		border-top: 152px solid $nvite-pink;
-		border-right: 65px solid transparent;
-		position: absolute;
-		bottom: -100px;
-		left: 12px;
-		border-bottom-left-radius: 3px;
-		@include rotate(30deg);
-	}
-}
+// 	&:after {
+// 		content: "";
+// 		width: 0;
+// 		height: 0;
+// 		border-top: 152px solid $nvite-pink;
+// 		border-right: 65px solid transparent;
+// 		position: absolute;
+// 		bottom: -100px;
+// 		left: 12px;
+// 		border-bottom-left-radius: 3px;
+// 		@include rotate(30deg);
+// 	}
+// }
 
-.popout-r-2 {
-	@extend .popout-r-1;
-	@include rotateX(180deg);
-	top: 60%;
-	width: 310px;
-	height: 160px;
-	left: 95%;
-}
+// .popout-r-2 {
+// 	@extend .popout-r-1;
+// 	@include rotateX(180deg);
+// 	top: 60%;
+// 	width: 310px;
+// 	height: 160px;
+// 	left: 95%;
+// }
 
-.popout-l-1 {
-	@extend .popout-r-1;
-	@include rotateY(180deg);
-	top: 10%;
-	width: 310px;
-	height: 220px;
-	left: -80%;
-}
+// .popout-l-1 {
+// 	@extend .popout-r-1;
+// 	@include rotateY(180deg);
+// 	top: 10%;
+// 	width: 310px;
+// 	height: 220px;
+// 	left: -80%;
+// }
 
-.section__social h2 {
-	color: $nvite-navy;
-	padding-top: 2em;
-}
 
-%screen {
-	display: none;
-}
 
-.iphone__screen--1 {
-	@extend %screen;
-	background-color: black;
-}
+// %screen {
+// 	display: none;
+// }
 
-.iphone__screen--2 {
-	@extend %screen;
-	background-color: yellow;
-}
+// .iphone__screen--1 {
+// 	@extend %screen;
+// 	background-color: black;
+// }
 
-.iphone__screen--3 {
-	@extend %screen;
-	background-color: green;
-}
+// .iphone__screen--2 {
+// 	@extend %screen;
+// 	background-color: yellow;
+// }
 
-.iphone__screen--d {
-	@extend %screen;
-	background-color: red;
-}
+// .iphone__screen--3 {
+// 	@extend %screen;
+// 	background-color: green;
+// }
+
+// .iphone__screen--d {
+// 	@extend %screen;
+// 	background-color: red;
+// }
 
 //iPHONE IN CSS WOO
 

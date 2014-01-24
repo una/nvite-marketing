@@ -21,13 +21,20 @@
 	color: white;
 }
 
+.text--navy,
+%text--navy {
+	color: $nvite-navy;
+}
+
+
+%text-callout,
 .text-callout {
 	@extend %text--center;
-	@include fontsize(24);
 	font-weight: 500;
 	line-height: 1.2em;
 	position: relative;
 	text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+	@include fontsize(24);
 }
 
 a {
@@ -46,4 +53,14 @@ h2 {
 small {
 	font-size: 80%;
 	color: $nvite-gray;
+}
+
+.headline {
+	margin: 3em 0 1em;
+	@extend %text-callout;
+}
+
+.sub-head {
+	color: #ccc;
+	margin: 0 0 4em;
 }
