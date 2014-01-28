@@ -1,5 +1,5 @@
 $(window).scroll(function() {
-  $('.iphone, .section__social h2').toggleClass('js-fixedPos', $('html').scrollTop() >= 400 );
+  $('.iphone, .section__social h2, .line--dotted').toggleClass('js-fixedPos', $('html').scrollTop() >= 400 );
 });
 
 //On click of input area, stop auto typing

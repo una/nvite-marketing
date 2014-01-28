@@ -42,7 +42,7 @@ a {
 }
 
 p {
-	color: $copy-color;
+	color: lighten($copy-color, 10);
 }
 
 h1,

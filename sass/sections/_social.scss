@@ -67,142 +67,15 @@
 	}
 }
 
-// //iPHONE IN CSS WOO
-
-// .iphone {
-// 	$screen-width: 250px; // <-- this is the only variable, make this ($(window).width()/4)
-// 	$screen-height: (71/40)*$screen-width; //71:40 for iPhone5, 3:2 for iPhone4
-// 	$phone-gutter: $screen-width/16;
-// 	$phone-color: $nvite-navy;
-// 	$iphone-color-shadow: darken($phone-color, 10);
-	
-// 	width: $screen-width + $phone-gutter*2;
-// 	z-index: 1;
-
-// 	.iphone-body {
-// 		background-color: $phone-color;
-// 		border-radius: $phone-gutter*2;
-// 		height: $screen-height + (1/3)*$screen-height;
-// 		position: absolute;
-// 		width: $screen-width + $phone-gutter*2;
-// 		// @include box-shadow(rgba(0,0,0,0.3) 2px 2px 20px);
-// 	}
-
-// 	.screen {
-// 		outline: $phone-gutter/4 solid $iphone-color-shadow;
-// 		height: $screen-height; //71:40 aspect ratio
-// 		position: relative;
-// 		top: $screen-height/6;
-// 		width: $screen-width;
-// 		margin: 0 auto;
-// 		background-image: image-url('screen4.jpg');
-// 		background-size: 100%;
-// 	}
-
-// 	.home-button {
-// 		border-radius: 50%;
-// 		border: $phone-gutter/7 solid $iphone-color-shadow;
-// 		height: $phone-gutter*3;
-// 		left: $screen-width/2;
-// 		position: absolute;
-// 		top: $screen-height + (1/5)*$screen-height;
-// 		width: $phone-gutter*3;
-// 		z-index: 2;
-// 	}
-
-// 	.speaker {
-// 		width: $screen-width/6;
-// 		height: $phone-gutter/3;
-// 		background-color: darken($iphone-color-shadow, 15);
-// 		z-index: 2;
-// 		position: relative;
-// 		margin: 0 auto;
-// 		border-radius: 25%;
-// 		position: relative;
-// 		top: $screen-height*(-8/9);
-// 		margin: 0 auto;
-// 	}
-// }
-//iPAD!
-
-// $ipad-width: 500px; // <-- this is the only variable
-// $ipad-height: (4/3)*$ipad-width;
-// $ipad-gutter: $ipad-width/16;
-// $ipad-color: white;
-// $ipad-color-shadow: darken($ipad-color, 10);
-
-// * {
-//   box-sizing: border-box;
-// }
-
-// body {
-//   background: #7fefd5;
-// }
-
-// .ipad {
-// 	@include transition-duration(1.2s);
-//    width: $ipad-width + $ipad-gutter*2;
-//    margin: 5% auto;
-//    position: absolute;
-//    top: 1100px; 
-//    left: -50px;
-//    z-index: 0;
-//    @include rotate(40deg);
-   
-//    &.js-screenSwitch {
-//    		top: 900px;
-//    		@include rotate(20deg);
-//    }
-// }
-
-// .ipad__body {
-//   background-color: $ipad-color;
-//   border-radius: $ipad-gutter;
-//   height: $ipad-height + (1/3)*$ipad-height;
-//   position: absolute;
-//   width: $ipad-width + $ipad-gutter*2;
-//   // @include box-shadow(rgba(0,0,0,0.3) 2px 2px 20px);
-// }
-
-// .ipad__screen {
-//   // background-color: lightblue;
-//   outline: $ipad-gutter/10 solid $ipad-color-shadow;
-//   height: $ipad-height; //71:40 aspect ratio
-//   position: relative;
-//   top: $ipad-height/6;
-//   width: $ipad-width;
-//   margin: 0 auto;
-//   background-image: image-url('ipad-screen1.jpg');
-// }
-
-// .ipad__home-button {
-//   border-radius: 50%;
-//   border: $ipad-gutter/10 solid $ipad-color-shadow;
-//   height: $ipad-gutter*1.5;
-//   left: $ipad-width/2;
-//   position: absolute;
-//   top: $ipad-height + (1/4.5)*$ipad-height;
-//   width: $ipad-gutter*1.5;
-//   z-index: 2;
-// }
-
-// .ipad__cam {
-//   width: $ipad-gutter/3;
-//   height: $ipad-gutter/3;
-//   background-color: darken($ipad-color-shadow, 15);
-//   z-index: 2;
-//   position: relative;
-//   margin: 0 auto;
-//   border-radius: 50%;
-//   position: relative;
-//   top: $ipad-height*(-9.3/10);
-//   margin: 0 auto;
-// }
-
 .text-box {
+	margin: 0 auto;
 	height: 100px;
 	width: 300px;
 	display: block; 
+	
+	p {
+		font-weight: 200;
+	}
 	
 	.icon {
 		width: 110px;
@@ -215,32 +88,58 @@
 	}
 
 	&:nth-child(1) {
-		margin: 0 auto;
 		@include transform( translateX(-400px) translateY(50px));
 		.icon {
 			background-image: image-url('icon1.svg');
 		}
+		.line--dotted {
+			@include transform(rotate(5deg) translateX(250px) translateY(100px));
+			width:250px;
+		}
 	}
 	&:nth-child(2) {
-		margin: 0 auto;
 		@include transform(translateX(-400px) translateY(220px));
 		.icon {
+			width: 65px;
 			background-image: image-url('icon2.svg');
+		}
+		.line--dotted {
+			@include transform(rotate(20deg) translateX(230px) translateY(20px));
+			width: 350px;
 		}
 	}
 	&:nth-child(3) {
-		margin: 0 auto;
 		@include transform(translateX(400px) translateY(-150px));
 		.icon {
 			background-image: image-url('icon3.svg');
 		}
+		.line--dotted {
+			@include transform(rotate(-40deg) translateX(-380px) translateY(-50px));
+			width: 400px;
+			
+		}
 	}
 	&:nth-child(4) {
-		margin: 0 auto;
 		@include transform(translateX(400px) translateY(15px));
 		.icon {
 			background-image: image-url('icon4.svg');
 		}
+		.line--dotted {
+			@include transform(rotate(-10deg) translateX(-180px) translateY(60px));
+			width: 220px;
+		}
 	}
+}
 
+.line--dotted {
+	@include transition-duration(1.5s);
+	background-image: image-url('dottedline.svg');
+	width: 300px;
+	height: 4px;
+	display: block;
+	opacity: 0;
+	
+	&.js-fixedPos {
+		opacity: 1;
+	}
 }
