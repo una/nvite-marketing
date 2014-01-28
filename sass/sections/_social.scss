@@ -1,91 +1,128 @@
 .section__social {
 	margin-top: $intro-height;
-	height: 1000px; //TEMP
+	height: 850px; //TEMP
 	background-color: white;
-}
+	
+	hr {
+		opacity: 1;
+		border-top: 1px solid $nvite-red;
+		border-bottom: 1px solid $nvite-red;
+		margin: 1.5em auto;
+		width: 70%;
+	}
 
-.popouts {
-	@include transition-duration(0.8s);
-	//display: none;
-	opacity: 0;
+	h1 {
+		@extend %text-callout;
+		color: $nvite-navy;
+	}
+	
+	h2 {
+		@include transition-duration(1s);
+		color: $nvite-navy;
+		padding-top: 2em;
+		opacity: 0;
+		
+		&.js-fixedPos {
+			opacity: 1;
+		}
+	}
 }
 
 .iphone {
-	@include transition-duration(0.8s);
-	margin: 30px auto;
+	@include transition-duration(1s);
+	margin: 0 auto;
 	position: absolute;
-	top: $intro-height/1.8;
+	top: 400px; 
 	left: 0; 
 	right: 0;
 }
 
-.section__social h2 {
-	color: $nvite-navy;
-	padding-top: 2em;
-}
-
-.js-fixedPos {
-		@include transform (rotate(-25deg) translateX(-300px));
-	    margin-top: 290px;
-}
-
-//iPHONE IN CSS WOO
-
-$screen-width: 250px; // <-- this is the only variable, make this ($(window).width()/4)
-$screen-height: (71/40)*$screen-width; //71:40 for iPhone5, 3:2 for iPhone4
-$phone-gutter: $screen-width/16;
-$phone-color: white;
-$iphone-color-shadow: darken($phone-color, 10);
-
 .iphone {
-	width: $screen-width + $phone-gutter*2;
-	z-index: 1;
+	background-image: image-url('iphone-body.svg');
+	width: 280px;
+	height: 585px;
+	display: block;
+	background-repeat: no-repeat;
+	@include background-size (100%);
+	
+	&.js-fixedPos {
+		width: 250px;
+		top: 870px;
+		
+		.screen {
+			top: 11.25%;
+		}
+	}
+	
+	.screen {
+		background-image: image-url('screen4.jpg');
+		height: 75%;
+		position: relative;
+		top: 12.5%;
+		width: 88%;
+		margin: 0 auto;
+		background-image: url('../images/screen4.jpg?1390511052');
+		@include background-size (100%);
+		background-repeat: no-repeat;
+	}
 }
 
-.iphone-body {
-	background-color: $phone-color;
-	border-radius: $phone-gutter*2;
-	height: $screen-height + (1/3)*$screen-height;
-	position: absolute;
-	width: $screen-width + $phone-gutter*2;
-	// @include box-shadow(rgba(0,0,0,0.3) 2px 2px 20px);
-}
+// //iPHONE IN CSS WOO
 
-.screen {
-	//background-color: lightblue;
-	outline: $phone-gutter/4 solid $iphone-color-shadow;
-	height: $screen-height; //71:40 aspect ratio
-	position: relative;
-	top: $screen-height/6;
-	width: $screen-width;
-	margin: 0 auto;
-	background-image: image-url('screen4.jpg');
-}
+// .iphone {
+// 	$screen-width: 250px; // <-- this is the only variable, make this ($(window).width()/4)
+// 	$screen-height: (71/40)*$screen-width; //71:40 for iPhone5, 3:2 for iPhone4
+// 	$phone-gutter: $screen-width/16;
+// 	$phone-color: $nvite-navy;
+// 	$iphone-color-shadow: darken($phone-color, 10);
+	
+// 	width: $screen-width + $phone-gutter*2;
+// 	z-index: 1;
 
-.home-button {
-	border-radius: 50%;
-	border: $phone-gutter/7 solid $iphone-color-shadow;
-	height: $phone-gutter*3;
-	left: $screen-width/2;
-	position: absolute;
-	top: $screen-height + (1/5)*$screen-height;
-	width: $phone-gutter*3;
-	z-index: 2;
-}
+// 	.iphone-body {
+// 		background-color: $phone-color;
+// 		border-radius: $phone-gutter*2;
+// 		height: $screen-height + (1/3)*$screen-height;
+// 		position: absolute;
+// 		width: $screen-width + $phone-gutter*2;
+// 		// @include box-shadow(rgba(0,0,0,0.3) 2px 2px 20px);
+// 	}
 
-.speaker {
-	width: $screen-width/6;
-	height: $phone-gutter/3;
-	background-color: darken($iphone-color-shadow, 15);
-	z-index: 2;
-	position: relative;
-	margin: 0 auto;
-	border-radius: 25%;
-	position: relative;
-	top: $screen-height*(-8/9);
-	margin: 0 auto;
-}
+// 	.screen {
+// 		outline: $phone-gutter/4 solid $iphone-color-shadow;
+// 		height: $screen-height; //71:40 aspect ratio
+// 		position: relative;
+// 		top: $screen-height/6;
+// 		width: $screen-width;
+// 		margin: 0 auto;
+// 		background-image: image-url('screen4.jpg');
+// 		background-size: 100%;
+// 	}
 
+// 	.home-button {
+// 		border-radius: 50%;
+// 		border: $phone-gutter/7 solid $iphone-color-shadow;
+// 		height: $phone-gutter*3;
+// 		left: $screen-width/2;
+// 		position: absolute;
+// 		top: $screen-height + (1/5)*$screen-height;
+// 		width: $phone-gutter*3;
+// 		z-index: 2;
+// 	}
+
+// 	.speaker {
+// 		width: $screen-width/6;
+// 		height: $phone-gutter/3;
+// 		background-color: darken($iphone-color-shadow, 15);
+// 		z-index: 2;
+// 		position: relative;
+// 		margin: 0 auto;
+// 		border-radius: 25%;
+// 		position: relative;
+// 		top: $screen-height*(-8/9);
+// 		margin: 0 auto;
+// 	}
+// }
 //iPAD!
 
 // $ipad-width: 500px; // <-- this is the only variable
@@ -162,14 +199,48 @@ $iphone-color-shadow: darken($phone-color, 10);
 //   margin: 0 auto;
 // }
 
-.text-boxes {
-	position: absolute;
-	right: 40px;
-	// &:nth-child(1) {
-	// 	top: 0;
-	// }
-	// &:nth-child(2) {
-	// 	top: 120px;
-	// }
+.text-box {
+	height: 100px;
+	width: 300px;
+	display: block; 
+	
+	.icon {
+		width: 110px;
+		height: 80px;
+		display: block;
+		margin: 0 auto; 
+		@include background-size(100%);
+		background-repeat: no-repeat;
+		background-position: 50%; 
+	}
+
+	&:nth-child(1) {
+		margin: 0 auto;
+		@include transform( translateX(-400px) translateY(50px));
+		.icon {
+			background-image: image-url('icon1.svg');
+		}
+	}
+	&:nth-child(2) {
+		margin: 0 auto;
+		@include transform(translateX(-400px) translateY(220px));
+		.icon {
+			background-image: image-url('icon2.svg');
+		}
+	}
+	&:nth-child(3) {
+		margin: 0 auto;
+		@include transform(translateX(400px) translateY(-150px));
+		.icon {
+			background-image: image-url('icon3.svg');
+		}
+	}
+	&:nth-child(4) {
+		margin: 0 auto;
+		@include transform(translateX(400px) translateY(15px));
+		.icon {
+			background-image: image-url('icon4.svg');
+		}
+	}
 
 }

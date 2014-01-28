@@ -1,10 +1,5 @@
 $(window).scroll(function() {
-	var styledDiv = $('.iphone'),
-		targetScroll = $('.iphone').position().top,
-		currentScroll = $('html').scrollTop() || $('body').scrollTop();
-
-	styledDiv.toggleClass('js-fixedPos', currentScroll >= targetScroll).addClass('js-screenSwitch');
-	$('.ipad').toggleClass('js-screenSwitch', currentScroll >= targetScroll);
+  $('.iphone, .section__social h2').toggleClass('js-fixedPos', $('html').scrollTop() >= 400 );
 });
 
 //On click of input area, stop auto typing
