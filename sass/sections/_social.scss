@@ -70,6 +70,10 @@
 		}
 	}
 
+//** NOTE TO SELF: mixin for:
+//		@include background-size (100%);
+//		background-repeat: no-repeat;
+
 	.screen {
 		@include transition-duration(0.8s);
 		height: 75%;
@@ -82,27 +86,65 @@
 		background-repeat: no-repeat;
 		
 		&.iphone__screen--1 {
-		background-image: image-url('screen1.jpg');
+		background-image: image-url('screen1dim.jpg');
 		@extend %mid-absolute;
-		display:none;
+		display: none;
+		opacity: 0;
+		
+			.social-card {
+				@include transition-duration(0.8s);
+				@include background-size (100%);
+				background-repeat: no-repeat;
+				background-image: image-url('social-card.png');
+				@extend %mid-absolute;
+				
+				display: block;
+				width: 90%;
+				top: 20%;
+				height: 210px;
+				z-index: 3;
+				margin: 0 auto;
+				position: relative;
+				@include transform (scale(0.1));
+			}
+
+			&.opened {
+				display: block;
+				@include animation(fadein 0.8s forwards);
+				.social-card {
+					@include animation(scalein 1s forwards);
+				}
+			}
 		}		
 		&.iphone__screen--2 {
 		background-image: image-url('screen2.jpg');
 		@extend %mid-absolute;
 		display:none;
+			&.opened {
+				display: block; 
+			}
 		}		
 		&.iphone__screen--3 {
 		background-image: image-url('screen3.jpg');
 		@extend %mid-absolute;
 		display:none;
+			&.opened {
+				display: block; 
+			}
 		}		
 		&.iphone__screen--4 {
 		background-image: image-url('screen4.jpg');
 		@extend %mid-absolute; 
 		display:none;
+			&.opened {
+				display: block; 
+			}
 		}
+
 	}
 }
+
+
 
 %text-box{
 	margin: 0 auto;

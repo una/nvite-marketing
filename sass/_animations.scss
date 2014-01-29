@@ -1,0 +1,33 @@
+// keyframes mixin
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content; 
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  } 
+}
+ 
+@include keyframes(fadein) {
+  0% {
+    opacity: 0;
+    }
+  100% {
+    opacity: 1;
+  } 
+}
+
+@include keyframes(scalein) {
+  0% {
+    @include transform (scale(0.1));
+    }
+  100% {
+    @include transform (scale(1));
+  } 
+}

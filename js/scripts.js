@@ -9,23 +9,31 @@ $('.intro-form').on('click', function(){
 
 //MAKE THIS ALOT NICER 
 $('.text-box--1').hover(function(){
-  $('.screen').hide();
-  $('.iphone__screen--1').show();
+  $('.screen').removeClass('opened');
+  $('.line--dotted').css('opacity','0');
+  $('.iphone__screen--1').addClass('opened');
+  $(this).find($('.line--dotted')).css('opacity','1');
 });
 
 $('.text-box--2').hover(function(){
-  $('.screen').hide();
-  $('.iphone__screen--2').show();
+  $('.screen').removeClass('opened');
+  $('.line--dotted').css('opacity','0');
+  $('.iphone__screen--2').addClass('opened');
+  $(this).find($('.line--dotted')).css('opacity','1');
 });
 
 $('.text-box--3').hover(function(){
-  $('.screen').hide();
-  $('.iphone__screen--3').show();
+  $('.screen').removeClass('opened');
+  $('.line--dotted').css('opacity','0');
+  $('.iphone__screen--3').addClass('opened');
+  $(this).find($('.line--dotted')).css('opacity','1');
 });
 
 $('.text-box--4').hover(function(){
-  $('.screen').hide();
-  $('.iphone__screen--4').show();
+  $('.screen').removeClass('opened');
+  $('.line--dotted').css('opacity','0');
+  $('.iphone__screen--4').addClass('opened');
+  $(this).find($('.line--dotted')).css('opacity','1');
 });
 
 //RETYPING
