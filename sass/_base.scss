@@ -38,6 +38,10 @@ hr {
 	float: right;
 }
 
-.text-box {
-	max-width: 300px;
+
+
+%mid-absolute {
+	position: absolute;
+	left: 0;
+	right: 0;
 }

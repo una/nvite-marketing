@@ -1,7 +1,25 @@
+%section {
+	height: 850px; //TEMP
+	@include box-shadow(rgba(0,0,0,0.4) 0px 0px 60px);
+	
+	h2 {
+		padding-top: 2em;
+	}
+}
+
+%section--white {
+	@extend %section;
+	background-color: white;
+
+	h2 {
+		color: $nvite-navy;
+		padding-top: 2em;
+	}
+}
+
 .section__social {
 	margin-top: $intro-height;
-	height: 850px; //TEMP
-	background-color: white;
+	@extend %section--white;
 	
 	hr {
 		opacity: 1;
@@ -18,8 +36,6 @@
 	
 	h2 {
 		@include transition-duration(1s);
-		color: $nvite-navy;
-		padding-top: 2em;
 		opacity: 0;
 		
 		&.js-fixedPos {
@@ -53,23 +69,44 @@
 			top: 11.25%;
 		}
 	}
-	
+
 	.screen {
-		background-image: image-url('screen4.jpg');
+		@include transition-duration(0.8s);
 		height: 75%;
 		position: relative;
 		top: 12.5%;
 		width: 88%;
 		margin: 0 auto;
-		background-image: url('../images/screen4.jpg?1390511052');
+		background-image: image-url('screen4.jpg');
 		@include background-size (100%);
 		background-repeat: no-repeat;
+		
+		&.iphone__screen--1 {
+		background-image: image-url('screen1.jpg');
+		@extend %mid-absolute;
+		display:none;
+		}		
+		&.iphone__screen--2 {
+		background-image: image-url('screen2.jpg');
+		@extend %mid-absolute;
+		display:none;
+		}		
+		&.iphone__screen--3 {
+		background-image: image-url('screen3.jpg');
+		@extend %mid-absolute;
+		display:none;
+		}		
+		&.iphone__screen--4 {
+		background-image: image-url('screen4.jpg');
+		@extend %mid-absolute; 
+		display:none;
+		}
 	}
 }
 
-.text-box {
+%text-box{
 	margin: 0 auto;
-	height: 100px;
+	height: 250px;
 	width: 300px;
 	display: block; 
 	
@@ -86,52 +123,9 @@
 		background-repeat: no-repeat;
 		background-position: 50%; 
 	}
-
-	&:nth-child(1) {
-		@include transform( translateX(-400px) translateY(50px));
-		.icon {
-			background-image: image-url('icon1.svg');
-		}
-		.line--dotted {
-			@include transform(rotate(5deg) translateX(250px) translateY(100px));
-			width:250px;
-		}
-	}
-	&:nth-child(2) {
-		@include transform(translateX(-400px) translateY(220px));
-		.icon {
-			width: 65px;
-			background-image: image-url('icon2.svg');
-		}
-		.line--dotted {
-			@include transform(rotate(20deg) translateX(230px) translateY(20px));
-			width: 350px;
-		}
-	}
-	&:nth-child(3) {
-		@include transform(translateX(400px) translateY(-150px));
-		.icon {
-			background-image: image-url('icon3.svg');
-		}
-		.line--dotted {
-			@include transform(rotate(-40deg) translateX(-380px) translateY(-50px));
-			width: 400px;
-			
-		}
-	}
-	&:nth-child(4) {
-		@include transform(translateX(400px) translateY(15px));
-		.icon {
-			background-image: image-url('icon4.svg');
-		}
-		.line--dotted {
-			@include transform(rotate(-10deg) translateX(-180px) translateY(60px));
-			width: 220px;
-		}
-	}
 }
 
-.line--dotted {
+%line--dotted {
 	@include transition-duration(1.5s);
 	background-image: image-url('dottedline.svg');
 	width: 300px;
@@ -141,5 +135,59 @@
 	
 	&.js-fixedPos {
 		opacity: 1;
+	}
+}
+
+.text-box--1 {
+	@extend %text-box;
+	@include transform( translateX(-400px) translateY(50px));
+	.icon {
+		background-image: image-url('icon1.svg');
+	}
+	.line--dotted {
+		@extend %line--dotted;
+		@include transform(rotate(5deg) translateX(250px) translateY(100px));
+		width:250px;
+	}
+}
+
+.text-box--2 {
+	@extend %text-box;
+	@include transform(translateX(-400px) translateY(70px));
+	.icon {
+		width: 65px;
+		background-image: image-url('icon2.svg');
+	}
+	.line--dotted {
+		@extend %line--dotted;
+		@extend %text-box;
+		@include transform(rotate(20deg) translateX(230px) translateY(20px));
+		width: 350px;
+	}
+}
+
+.text-box--3 {
+	@extend %text-box;
+	@include transform(translateX(400px) translateY(-450px));
+	.icon {
+		background-image: image-url('icon3.svg');
+	}
+	.line--dotted {
+		@extend %line--dotted;
+		@include transform(rotate(-40deg) translateX(-380px) translateY(-50px));
+		width: 400px;
+	}
+}
+
+.text-box--4 {
+	@extend %text-box;
+	@include transform(translateX(400px) translateY(-435px));
+	.icon {
+		background-image: image-url('icon4.svg');
+	}
+	.line--dotted {
+		@extend %line--dotted;
+		@include transform(rotate(-10deg) translateX(-180px) translateY(60px));
+		width: 220px;
 	}
 }

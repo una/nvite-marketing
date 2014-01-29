@@ -3,8 +3,29 @@ $(window).scroll(function() {
 });
 
 //On click of input area, stop auto typing
-$('.intro-form input').on('click', function(){
+$('.intro-form').on('click', function(){
   $('.input-words').css('display', 'none');
+});
+
+//MAKE THIS ALOT NICER 
+$('.text-box--1').hover(function(){
+  $('.screen').hide();
+  $('.iphone__screen--1').show();
+});
+
+$('.text-box--2').hover(function(){
+  $('.screen').hide();
+  $('.iphone__screen--2').show();
+});
+
+$('.text-box--3').hover(function(){
+  $('.screen').hide();
+  $('.iphone__screen--3').show();
+});
+
+$('.text-box--4').hover(function(){
+  $('.screen').hide();
+  $('.iphone__screen--4').show();
 });
 
 //RETYPING
